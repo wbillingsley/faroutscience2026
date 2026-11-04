@@ -7,7 +7,7 @@ export default defineConfig({
     projectID: "ai4p",  
   })],
   
-  base: '/ai4p/',
+  base: '/faroutscience2026/',
   publicDir: 'assets',
 
   server: {

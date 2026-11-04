@@ -30,6 +30,21 @@ given markdown:Markup = Markup(Marked.parse(_))
     site.toc = site.Toc(
       "Home" -> site.HomeRoute,
 
+      "Outreach talks" -> site.Toc(
+        "Bits for Brains" -> site.add("bitsForBrains",
+          Alternative("Slide deck", Deck(() => talks.bitsForBrains)),
+        ),
+
+        "AI under the hood" -> site.add("underTheHood",
+          Alternative("Slide deck", Deck(() => talks.underTheHood)),
+        ),
+
+        "AI's scary future" -> site.add("scaryFuture",
+          Alternative("Slide deck", Deck(() => talks.scaryFuture)),
+        ),
+      ),
+
+
       "State spaces" -> site.Toc(
         "Intro" -> site.addPage("statespaces", statespace.stateSpaceIntro),
 
